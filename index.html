@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimalist Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: none; /* hide default cursor */
+    }
+    html, body {
+      font-family: 'Playfair Display', serif;
+      background-color: #f3f3f3;
+      color: #111;
+      scroll-behavior: smooth;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 100;
+    }
+    nav a {
+      display: block;
+      margin-bottom: 10px;
+      color: #111;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .cursor {
+      width: 20px;
+      height: 20px;
+      background: #000;
+      border-radius: 50%;
+      position: fixed;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="intro">
+    <h1>Creative<br>Design<br>Studio</h1>
+  </section>
+
+  <section id="about">
+    <div>
+      <h2>About</h2>
+      <p>We are a multidisciplinary design collective blending form and function in playful, unexpected ways. Our work spans digital, print, and beyond.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div>
+      <h2>Selected Work</h2>
+      <p>From cultural institutions to avant-garde fashion, we’ve partnered with forward-thinking clients who challenge the status quo.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div>
+      <h2>Contact</h2>
+      <p>Say hello at <a href="mailto:studio@example.com">studio@example.com</a></p>
+    </div>
+  </section>
+
+  <script>
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+  </script>
+</body>
+</html>
